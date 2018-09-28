@@ -76,7 +76,9 @@ export class ProfilePage {
     this.camera.getPicture(options).then((ImageData) => {
       this.picture = "data:image/png;base64," + ImageData;
       this.cameraOn = false;
-    }, (err) => {});
+    }, (err) => {
+      this.cameraOn = false;
+    });
   }
 
   getGalleryPicture()
@@ -92,7 +94,9 @@ export class ProfilePage {
     this.camera.getPicture(options).then((ImageData) => {
       this.picture = "data:image/png;base64," + ImageData;
       this.cameraOn = false;
-    }, (err) => {});
+    }, (err) => {
+      this.cameraOn = false;
+    });
   }
 
   sendPicture()
